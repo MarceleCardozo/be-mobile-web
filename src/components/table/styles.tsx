@@ -19,6 +19,10 @@ const THeadStyled = styled.thead`
 const TRStyled = styled.tr`
   border-bottom: 2px solid ${(props) => props.theme.colors.neutral.gray10};
   height: 48px;
+
+  @media (max-width: 768px) {
+    height: 60px;
+  }
 `;
 
 const AvatarStyled = styled.img`
@@ -31,4 +35,29 @@ const TDStyled = styled.td`
   text-align: center;
 `;
 
-export { TableStyled, THeadStyled, TRStyled, AvatarStyled, TDStyled };
+const THStyled = styled.th`
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+const Circle = styled.div`
+  width: 8px;
+  height: 8px;
+  background-color: ${(props) => props.theme.colors.neutral.white};
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+export {
+  TableStyled,
+  THeadStyled,
+  TRStyled,
+  AvatarStyled,
+  TDStyled,
+  Circle,
+  THStyled,
+};

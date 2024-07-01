@@ -8,10 +8,6 @@ const SearchWrapperStyled = styled.div`
   border-radius: 8px;
   background-color: ${(props) => props.theme.colors.neutral.white};
   justify-content: space-between;
-
-  @media (max-width: 768px) {
-    width: 100%;
-  }
 `;
 
 const SearchInputStyled = styled.input`

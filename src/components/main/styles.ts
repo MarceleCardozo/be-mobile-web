@@ -8,7 +8,7 @@ const MainStyled = styled.main`
   gap: 30px;
 
   @media (max-width: 768px) {
-    padding: 10px;
+    padding: 20px;
     gap: 15px;
   }
 `;

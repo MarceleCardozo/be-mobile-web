@@ -1,7 +1,7 @@
 import { SearchInputStyled, SearchWrapperStyled } from "../search/styles";
 import TitleStyled from "../title/styles";
 import WrapperStyled from "./styles";
-import iconSearch from "../../assets/Default.svg";
+import iconSearch from "../../assets/search.svg";
 
 function Wrapper() {
   return (
