@@ -4,7 +4,6 @@ const WrapperStyled = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 5%;
 
   @media (max-width: 768px) {
     align-items: start;

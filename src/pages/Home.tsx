@@ -1,12 +1,17 @@
+import MainStyled from "../components/body/styles";
 import ContainerStyled from "../components/container/styles";
 import Header from "../components/header";
+import Table from "../components/table";
 import Wrapper from "../components/wrapper";
 
 function Home() {
   return (
     <ContainerStyled>
       <Header />
-      <Wrapper />
+      <MainStyled>
+        <Wrapper />
+        <Table />
+      </MainStyled>
     </ContainerStyled>
   );
 }

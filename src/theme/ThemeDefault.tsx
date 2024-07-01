@@ -4,7 +4,7 @@ const theme = {
   colors: {
     primary: {
       blue: "#5A84C0",
-      gradient: "linear-gradient(45deg, #5A84C0, #594ED2)",
+      gradient: "linear-gradient(180deg, #5A84C0 0%, #594ED2 100%)",
     },
     neutral: {
       black: "#1C1C1C",
@@ -16,17 +16,17 @@ const theme = {
   },
   typography: {
     h1: {
-      fontFamily: "Roboto, sans-serif",
+      fontFamily: "Roboto",
       fontWeight: 500,
       fontSize: "24px",
     },
     h2: {
-      fontFamily: "Roboto, sans-serif",
+      fontFamily: "Roboto",
       fontWeight: 500,
       fontSize: "16px",
     },
     h3: {
-      fontFamily: "Roboto, sans-serif",
+      fontFamily: "Roboto",
       fontWeight: 400,
       fontSize: "16px",
     },
