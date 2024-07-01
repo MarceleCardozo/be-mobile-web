@@ -1,5 +1,12 @@
+import Home from "./pages/Home";
+import ThemeDefault from "./theme/ThemeDefault";
+
 function App() {
-  return <h1>Hello World</h1>;
+  return (
+    <ThemeDefault>
+      <Home />
+    </ThemeDefault>
+  );
 }
 
 export default App;

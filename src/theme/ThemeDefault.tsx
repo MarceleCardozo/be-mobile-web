@@ -42,6 +42,10 @@ const theme = {
     little08: "08px",
     little04: "04px",
   },
+  shadows: {
+    shadow1: "0px 1px 2px 0px #00000033",
+    shadow2: "0px 2px 4px 0px #00000033",
+  },
 };
 
 interface ThemeDefaultProps {
