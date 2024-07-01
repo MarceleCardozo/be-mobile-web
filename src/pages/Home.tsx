@@ -1,4 +1,4 @@
-import MainStyled from "../components/body/styles";
+import MainStyled from "../components/main/styles";
 import ContainerStyled from "../components/container/styles";
 import Header from "../components/header";
 import Table from "../components/table";
