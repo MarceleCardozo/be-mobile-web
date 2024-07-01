@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
+import axios, { AxiosError } from "axios";
 import { IEmployee } from "../../types/types";
 import formatPhoneNumber from "../../utils/formatPhoneNumber";
 import {
@@ -13,7 +13,6 @@ import {
 function Table() {
   const [data, setData] = useState<IEmployee[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
-  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     async function fetchData() {
@@ -21,7 +20,8 @@ function Table() {
         const response = await axios.get("http://localhost:3000/employees");
         setData(response.data);
       } catch (error) {
-        setError(error);
+        const axiosError = error as AxiosError<{ message: string }>;
+        throw new Error(axiosError.response?.data.message);
       } finally {
         setLoading(false);
       }
@@ -31,7 +31,6 @@ function Table() {
   }, []);
 
   if (loading) return <div>Loading...</div>;
-  if (error) return <div>Error: {error.message}</div>;
 
   return (
     <TableStyled>
