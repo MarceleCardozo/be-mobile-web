@@ -1,5 +1,9 @@
 import styled from "styled-components";
 
+interface TableProps {
+  expanded: boolean;
+}
+
 const TableStyled = styled.table`
   background-color: ${(props) => props.theme.colors.neutral.white};
   font-family: "Roboto";
@@ -16,8 +20,9 @@ const THeadStyled = styled.thead`
   border-radius: 8px 8px 0 0;
 `;
 
-const TRStyled = styled.tr`
-  border-bottom: 2px solid ${(props) => props.theme.colors.neutral.gray10};
+const TRStyled = styled.tr<TableProps>`
+  border-bottom: ${(props) =>
+    props.expanded ? "none" : `2px solid ${props.theme.colors.neutral.gray10}`};
   height: 48px;
 
   @media (max-width: 768px) {

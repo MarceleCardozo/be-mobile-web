@@ -1,7 +1,7 @@
 import React from "react";
-import styled from "styled-components";
 import { TDStyled } from "../table/styles";
 import formatPhoneNumber from "../../utils/formatPhoneNumber";
+import { ExpandedContentWrapper, ContentWrapper } from "./styled";
 
 interface ExpandedContentProps {
   job: string;
@@ -10,14 +10,6 @@ interface ExpandedContentProps {
   isMobile: boolean;
   expanded: boolean;
 }
-
-const ExpandedContentWrapper = styled.div<{ expanded: boolean }>`
-  display: ${(props) => (props.expanded ? "table-row" : "none")};
-  overflow: hidden;
-  transition: max-height 0.5s ease-out, opacity 0.3s ease-out;
-  max-height: ${(props) => (props.expanded ? "200px" : "0")};
-  opacity: ${(props) => (props.expanded ? "1" : "0")};
-`;
 
 const ExpandedContent: React.FC<ExpandedContentProps> = ({
   job,
@@ -29,16 +21,18 @@ const ExpandedContent: React.FC<ExpandedContentProps> = ({
   return (
     <ExpandedContentWrapper expanded={expanded}>
       <TDStyled colSpan={isMobile ? 4 : 5}>
-        <div>
-          <strong>Cargo:</strong> {job}
-        </div>
-        <div>
-          <strong>Data de Admissão:</strong>{" "}
-          {new Date(admission_date).toLocaleDateString()}
-        </div>
-        <div>
-          <strong>Telefone:</strong> {formatPhoneNumber(phone)}
-        </div>
+        <ContentWrapper>
+          <strong>Cargo:</strong>
+          <p>{job}</p>
+        </ContentWrapper>
+        <ContentWrapper>
+          <strong>Data de Admissão:</strong>
+          <p>{new Date(admission_date).toLocaleDateString()}</p>
+        </ContentWrapper>
+        <ContentWrapper>
+          <strong>Telefone:</strong>
+          <p>{formatPhoneNumber(phone)}</p>
+        </ContentWrapper>
       </TDStyled>
     </ExpandedContentWrapper>
   );

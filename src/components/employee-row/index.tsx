@@ -1,24 +1,15 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import formatPhoneNumber from "../../utils/formatPhoneNumber";
 import ExpandIcon from "../../assets/charm_chevron-down.svg";
 import { IEmployee } from "../../types/types";
 import { AvatarStyled, TDStyled, TRStyled } from "../table/styles";
-import styled, { css } from "styled-components";
 import ExpandedContent from "../expanded-content";
+import ExpandIconStyled from "./styles";
 
 interface EmployeeRowProps {
   employee: IEmployee;
   isMobile: boolean;
 }
-
-const ExpandIconStyled = styled.img<{ rotated: boolean }>`
-  transition: transform 0.3s ease-in-out;
-  ${(props) =>
-    props.rotated &&
-    css`
-      transform: rotate(180deg);
-    `}
-`;
 
 function EmployeeRow({ employee, isMobile }: EmployeeRowProps) {
   const { image, name, job, admission_date, phone } = employee;
@@ -30,7 +21,7 @@ function EmployeeRow({ employee, isMobile }: EmployeeRowProps) {
 
   return (
     <>
-      <TRStyled>
+      <TRStyled expanded={expanded}>
         <TDStyled>
           <AvatarStyled src={image} alt={`${name}'s profile`} />
         </TDStyled>
