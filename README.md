@@ -17,32 +17,32 @@ Antes de começar, você precisará ter as seguintes ferramentas instaladas em s
 ## Passos para Configuração da API Simulada:
 1 - Instale o json-server:
 Caso ainda não tenha o json-server instalado globalmente, você pode instalá-lo usando npm:
-npm install -g json-server
+- npm install -g json-server
 
 2 - Clone o repositório da API simulada:
 Clone o repositório do GitHub que contém a API simulada para seu diretório local:
-git clone https://github.com/BeMobile/desafio-front-end
+- git clone https://github.com/BeMobile/desafio-front-end
 
 3 - Inicie o json-server:
 Navegue até o diretório do projeto clonado e execute o seguinte comando para iniciar o json-server e consumir a API simulada:
-cd desafio-front-end
-json-server --watch db.json
+- cd desafio-front-end
+- json-server --watch db.json
 
 4 - Deixe este comando rodando no terminal para que os dados estejam disponíveis para sua aplicação.
 
 
 ## Passos para Configuração e Execução da Aplicação Front-End:
 1 - Clone este repositório do projeto front-end:
-git clone https://github.com/MarceleCardozo/be-mobile-web.git
+- git clone https://github.com/MarceleCardozo/be-mobile-web.git
 
 2 - Navegue até o diretório do projeto:
-cd be-mobile-web
+- cd be-mobile-web
 
 3 - Instale as dependências necessárias:
-npm install
+- npm install
 
 4 - Execute a aplicação:
-npm run dev
+- npm run dev
 
 5 - Acesse a aplicação:
 A aplicação estará disponível em http://localhost:5173.
