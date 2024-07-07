@@ -65,7 +65,7 @@ function Home() {
           <TitleStyled>Funcionários</TitleStyled>
           <SearchWrapperStyled>
             <SearchInputStyled
-              placeholder="Pesquisar por nome, cargo ou telefone"
+              placeholder="Pesquisar"
               value={searchTerm}
               onChange={handleSearchChange}
             />
