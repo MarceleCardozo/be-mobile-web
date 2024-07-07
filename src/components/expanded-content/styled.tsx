@@ -1,9 +1,5 @@
 import styled, { keyframes } from "styled-components";
 
-interface ExpandedContentWrapperProps {
-  expanded: boolean;
-}
-
 const slideDown = keyframes`
   0% {
     max-height: 0;
@@ -19,14 +15,13 @@ const slideDown = keyframes`
   }
 `;
 
-const ContentWrapper = styled.div<ExpandedContentWrapperProps>`
+const ContentWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 20px 30px;
   border-bottom: 1px dashed ${(props) => props.theme.colors.neutral.gray10};
   transition: opacity 0.5s ease-out;
-  animation: ${(props) => (props.expanded ? slideDown : "none")} 0.5s ease-out;
 `;
 
 const ExpandedContentWrapper = styled.div<{ expanded: boolean }>`
