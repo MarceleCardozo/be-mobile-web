@@ -48,8 +48,8 @@ Navegue até o diretório do projeto clonado e execute o seguinte comando para i
 A aplicação estará disponível em http://localhost:5173.
 
 ## Funcionalidades
-Expansão de Linhas na Tabela: Clique no ícone para expandir uma linha da tabela e exibir mais informações.
-Barra de Busca: Pesquise funcionários por nome, cargo ou número de telefone.
+- Expansão de Linhas na Tabela: Clique no ícone para expandir uma linha da tabela e exibir mais informações.
+- Barra de Busca: Pesquise funcionários por nome, cargo ou número de telefone.
 
 ## Estrutura do Projeto
 - src/assets: Imagens do projeto.
