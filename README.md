@@ -62,6 +62,6 @@ Barra de Busca: Pesquise funcionários por nome, cargo ou número de telefone.
 - src/App.tsx: Componente principal da aplicação.
   
 ## Tecnologias Utilizadas
-React
-styled-components
+- React
+- styled-components
 
